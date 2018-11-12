@@ -2,7 +2,16 @@
 The crhelper python script can be saved into your lambda zip to simplify best practice Custom Resource creation. It provides exception and timeout trapping, sending responses to CloudFormation and provides detailed, configurable logging.
 
 ### Usage
-In order to use it in your custom resource function, save crhelper.py in the root of your function zip path. Your handler file will then only need to import crhelper, define any init code and functions for create,update and delete events. For example:
+In order to use it in your custom resource function, save crhelper.py in the root of your function zip path. 
+
+Alternatively, you can install crhelper with pip:
+
+```bash
+pip install -t <source directory> crhelper
+```
+
+Your handler file will then only need to import crhelper, define any init code and functions for create,update and delete events. For example:
+
 
 ```python
 import crhelper
